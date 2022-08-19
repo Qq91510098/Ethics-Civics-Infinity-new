@@ -187,7 +187,39 @@ ruler = {
 				has_valid_civic = civic_galactic_uterus
 			}
 		}
+<<<<<<< Updated upstream
 		planet_jobs_upkeep_mult = 0.05
+=======
+		trade_value_add = 2
+		pop_growth_speed_reduction = -0.025
+		planet_pops_cat_ruler_goods_upkeep_mult = 0.05
+	}
+
+	
+	#寻乐者
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_pleasure_seekers
+			}
+		}
+		trade_value_mult = 0.01
+		planet_pops_cat_ruler_goods_upkeep_mult = 0.01
+	}
+
+	#The_IRS
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_edict = The_IRS
+			}
+		}
+		trade_value_add = 9
+		mult = value:scripted_modifier_mult|MODIFIER|pop_lifestyle_trade_mult|
+                                pop_cat_ruler_happiness = -0.005
+>>>>>>> Stashed changes
 	}
 	
 	# 资本主义
@@ -831,6 +863,34 @@ specialist = {
 		trade_value_add = 1
 	}
 	
+<<<<<<< Updated upstream
+=======
+	#寻乐者
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_pleasure_seekers
+			}
+		}
+		trade_value_mult = 0.01
+		planet_pops_cat_specialist_goods_upkeep_mult = 0.01
+	}
+
+	#The_IRS
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_edict = The_IRS
+			}
+		}
+		trade_value_add = 3
+		mult = value:scripted_modifier_mult|MODIFIER|pop_lifestyle_trade_mult|
+                                pop_cat_Specialist_happiness = -0.002
+	}
+
+>>>>>>> Stashed changes
 	#银河子宫
 	triggered_planet_modifier = {
 		potential = {
@@ -1453,6 +1513,22 @@ worker = {
 		}
 		pop_growth_speed = 0.01
 	}
+<<<<<<< Updated upstream
+=======
+	
+	#寻乐者
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_pleasure_seekers
+			}
+		}
+		trade_value_mult = 0.01
+		planet_pops_cat_worker_goods_upkeep_mult = 0.01
+	}
+
+>>>>>>> Stashed changes
 
 	# 资本主义
 	triggered_planet_modifier = {
