@@ -150,43 +150,6 @@ economic_consumer_coupon = {
 	}
 }
 
-explorer_privatization = { # 开拓者私有化协议
-	length = @EdictPerpetual
-	icon = "GFX_edict_type_policy"
-
-	resources = {
-		category = edicts
-		upkeep = {
-			unity = @Edict1Cost
-			multiplier = value:edict_size_effect
-		}
-	}
-
-	effect = {
-		custom_tooltip = edict_explorer_privatization_tooltip
-	}
-	modifier = {
-                                intel_decryption_add = 2
-                                SHIP_BASE_SPEED_MULT = 0.3
-		first_contact_speed_mult = 0.4
-        planet_colony_development_speed_mult = 0.2
-	}
-
-	potential = {
-		has_country_flag = ETHIC_MARKET_ECONOMY
-		NOT = { has_ethic = ethic_fanatic_socialism }
-	}
-	possible = {
-		always = yes
-	}
-
-	ai_weight = {
-		weight = 1
-		modifier = {
-			factor = 2
-			years_passed < 50
-		}
-
 # 反垄断法案
 The_anti_monopoly_Act = {
 	length = @EdictPerpetual
@@ -263,6 +226,45 @@ The_IRS = {
 
 	ai_weight = {
 		weight = 0
-                  	}
+	}
+}
+
+explorer_privatization = { # 开拓者私有化协议
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	effect = {
+		custom_tooltip = edict_explorer_privatization_tooltip
+	}
+	modifier = {
+                                SHIP_SENSOR_RANGE_MULT = 2
+                                FIRST_CONTACT_CLUES_ADD = 1
+		first_contact_speed_mult = 0.2
+        planet_colony_development_speed_mult = 0.2
+                                SHIP_BASE_SPEED_MULT = 0.3
+	}
+
+	potential = {
+		has_country_flag = ETHIC_MARKET_ECONOMY
+		NOT = { has_ethic = ethic_fanatic_socialism }
+	}
+	possible = {
+		always = yes
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 2
+			years_passed < 50
+		}
 	}
 }
