@@ -175,8 +175,8 @@ ruler = {
 				is_ai = yes
 			}
 		}
-		trade_value_mult = 0.01
-		trade_value_add = 1
+		trade_value_mult = 0.06
+		trade_value_add = 7
 	}
 	
 	#银河子宫
@@ -187,15 +187,11 @@ ruler = {
 				has_valid_civic = civic_galactic_uterus
 			}
 		}
-<<<<<<< Updated upstream
-		planet_jobs_upkeep_mult = 0.05
-=======
 		trade_value_add = 2
 		pop_growth_speed_reduction = -0.025
-		planet_pops_cat_ruler_goods_upkeep_mult = 0.05
+		planet_pops_cat_ruler_goods_upkeep_mult = 0.075
 	}
-
-	
+		
 	#寻乐者
 	triggered_planet_modifier = {
 		potential = {
@@ -208,20 +204,6 @@ ruler = {
 		planet_pops_cat_ruler_goods_upkeep_mult = 0.01
 	}
 
-	#The_IRS
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_edict = The_IRS
-			}
-		}
-		trade_value_add = 9
-		mult = value:scripted_modifier_mult|MODIFIER|pop_lifestyle_trade_mult|
-                                pop_cat_ruler_happiness = -0.005
->>>>>>> Stashed changes
-	}
-	
 	# 资本主义
 	triggered_planet_modifier = {
 		potential = {
@@ -242,6 +224,19 @@ ruler = {
 		}
 		trade_value_add = 0.25
 		mult = value:scripted_modifier_mult|MODIFIER|pop_lifestyle_trade_mult|
+	}
+
+	#The_IRS
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_edict = The_IRS
+			}
+		}
+		trade_value_add = 9
+		mult = value:scripted_modifier_mult|MODIFIER|pop_lifestyle_trade_mult|
+                                pop_cat_ruler_happiness = -0.005
 	}
 
 	triggered_planet_modifier = {
@@ -859,38 +854,10 @@ specialist = {
 				is_ai = yes
 			}
 		}
-		trade_value_mult = 0.01
-		trade_value_add = 1
+		trade_value_mult = 0.04
+		trade_value_add = 5
 	}
 	
-<<<<<<< Updated upstream
-=======
-	#寻乐者
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_pleasure_seekers
-			}
-		}
-		trade_value_mult = 0.01
-		planet_pops_cat_specialist_goods_upkeep_mult = 0.01
-	}
-
-	#The_IRS
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_edict = The_IRS
-			}
-		}
-		trade_value_add = 3
-		mult = value:scripted_modifier_mult|MODIFIER|pop_lifestyle_trade_mult|
-                                pop_cat_Specialist_happiness = -0.002
-	}
-
->>>>>>> Stashed changes
 	#银河子宫
 	triggered_planet_modifier = {
 		potential = {
@@ -912,7 +879,17 @@ specialist = {
 		}
 		pop_growth_speed_reduction = -0.01
 	}
-
+#寻乐者
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_valid_civic = civic_pleasure_seekers
+			}
+		}
+		trade_value_mult = 0.01
+		planet_pops_cat_specialist_goods_upkeep_mult = 0.01
+	}
 	# 资本主义
 	triggered_planet_modifier = {
 		potential = {
@@ -975,6 +952,19 @@ specialist = {
 		trade_value_add = @trade_value_very_high
 		mult = value:scripted_modifier_mult|MODIFIER|pop_lifestyle_trade_mult|
 	}
+                #The_IRS
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_edict = The_IRS
+			}
+		}
+		trade_value_add = 3
+		mult = value:scripted_modifier_mult|MODIFIER|pop_lifestyle_trade_mult|
+                                pop_cat_Specialist_happiness = -0.002
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			can_generate_trade_value = yes
@@ -1487,8 +1477,8 @@ worker = {
 				is_ai = yes
 			}
 		}
-		trade_value_mult = 0.01
-		trade_value_add = 1
+		trade_value_mult = 0.02
+		trade_value_add = 3
 	}
 	
 	#银河子宫
@@ -1513,10 +1503,7 @@ worker = {
 		}
 		pop_growth_speed = 0.01
 	}
-<<<<<<< Updated upstream
-=======
-	
-	#寻乐者
+#寻乐者
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -1527,9 +1514,18 @@ worker = {
 		trade_value_mult = 0.01
 		planet_pops_cat_worker_goods_upkeep_mult = 0.01
 	}
-
->>>>>>> Stashed changes
-
+	#The_IRS
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_edict = The_IRS
+			}
+		}
+		trade_value_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_lifestyle_trade_mult|
+                                pop_cat_Worker_happiness = -0.001
+	}
 	# 资本主义
 	triggered_planet_modifier = {
 		potential = {

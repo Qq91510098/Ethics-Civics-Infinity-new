@@ -414,6 +414,18 @@ situation_event = { # 计算情况改善-法令基础 16号
 			}
 			change_variable = { which = rec_situation_add_edict_temp value = -0.2 }
 		}
+		if = { # 反垄断 0.2增长
+			limit = {
+				owner = { has_edict = The_anti_monopoly_Act }
+			}
+			change_variable = { which = rec_situation_add_edict_temp value = 0.2 }
+		}
+		if = { # 国税局 0.2增长
+			limit = {
+				owner = { has_edict = The_IRS }
+			}
+			change_variable = { which = rec_situation_add_edict_temp value = -0.1 }
+		}
 		
 		round_variable_to_closest = {
 			which = rec_situation_add_edict_temp
@@ -430,7 +442,13 @@ situation_event = { # 计算情况改善-法令乘数 21号
     hide_window = yes
     immediate = {
 		set_variable = { which = rec_situation_mult_edict_temp value = 1 } # 初始化经济状态改善 - 法令乘数
-		
+		# 政策
+		if = { # 反垄断法案 *0.85增长
+			limit={
+				owner = { has_policy_flag = The_anti_monopoly_Act }
+			}
+			multiply_variable = { which = rec_crisis_mult_civic value = 0.85 }
+		}
 		#round_variable_to_closest = {
 		#	which = rec_situation_mult_edict_temp
 		#	value = 0.001
@@ -912,6 +930,18 @@ situation_event = { # 计算危机增长-无危机时-法令基础 18号
 				owner = { has_edict = economic_consumer_coupon }
 			}
 			change_variable = { which = rec_crisis_add_edict value = -0.6 }
+		}
+		if = { # 反垄断法案 -0.4增长
+			limit = {
+				owner = { has_edict = The_anti_monopoly_Act }
+			}
+			change_variable = { which = rec_crisis_add_edict value = -0.2 }
+		}
+		if = { # 国税局 -0.2增长
+			limit = {
+				owner = { has_edict = The_IRS }
+			}
+			change_variable = { which = rec_crisis_add_edict value = -0.1 }
 		}
 		round_variable_to_closest = {
 			which = rec_crisis_add_edict

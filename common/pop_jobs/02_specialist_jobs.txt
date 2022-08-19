@@ -125,6 +125,28 @@ merchant = {
 			planet_crime_add = 1
 		}
 	}
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_edict = The_anti_monopoly_Act
+			}
+		}
+		modifier = {
+			trade_value_add = 3.5
+			pop_happiness = -0.35
+		}
+	}
+	triggered_pop_modifier = {
+		potential = {
+			owner = {
+				has_edict = The_IRS
+			}
+		}
+		modifier = {
+                                                trade_value_add = 3
+			pop_happiness = -0.05
+		}
+	}
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
