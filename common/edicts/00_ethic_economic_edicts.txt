@@ -169,7 +169,7 @@ explorer_privatization = { # 开拓者私有化协议
                                 intel_decryption_add = 2
                                 SHIP_BASE_SPEED_MULT = 0.3
 		first_contact_speed_mult = 0.4
-        planet_colony_development_speed_mult = 0.2
+                                planet_colony_development_speed_mult = 0.2
 	}
 
 	potential = {
@@ -199,20 +199,18 @@ The_anti_monopoly_Act = {
 			multiplier = trigger:num_pops
 		}
 	}
-
 	effect = {
 		custom_tooltip = edict_The_anti_monopoly_Act
 	}
 	modifier = {
-        pop_lifestyle_trade_mult = 0.15
-        trade_value_mult = 0.45
-        pop_happiness = 0.1
-        pop_cat_ruler_happiness = -0.15
-        mogul_POP_HAPPINESS = -0.75
-        job_merchant_per_pop = 0.05
-        job_mogul_per_pop = -0.02
+                                pop_lifestyle_trade_mult = 0.15
+                                trade_value_mult = 0.45
+                                pop_happiness = 0.1
+                                pop_cat_ruler_happiness = -0.15
+                                mogul_POP_HAPPINESS = -0.75
+                                job_merchant_per_pop = 0.05
+                                job_mogul_per_pop = -0.02
 	}
-
 	potential = {
 		has_country_flag = ETHIC_MARKET_ECONOMY
 	}
@@ -245,10 +243,10 @@ The_IRS = {
 		custom_tooltip = edict_The_IRS
 	}
 	modifier = {
-        PLANET_STABILITY_ADD = -5
-        pop_cat_ruler_happiness = -0.35
-        pop_cat_Specialist_happiness = -0.25
-        pop_cat_Worker_happiness = -0.15
+                                PLANET_STABILITY_ADD = -5
+                                pop_cat_ruler_happiness = -0.35
+                                pop_cat_Specialist_happiness = -0.25
+                                pop_cat_Worker_happiness = -0.15
 	}
 
 	potential = {
